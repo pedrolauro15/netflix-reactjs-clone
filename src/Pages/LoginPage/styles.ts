@@ -169,6 +169,7 @@ export const Footer = styled.footer`
   background-color: rgba(0, 0, 0, 0.75);
   @media(max-width: 425px){
     padding: 32px 5%;
+    border-top: 1px solid #757575;
   }
 
   > p {

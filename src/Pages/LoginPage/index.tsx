@@ -21,7 +21,12 @@ const LoginPage: React.FC = () => {
               <button type="submit">Entrar</button>
               <div>
                 <label htmlFor="remember-login">
-                  <input type="checkbox" name="remember" id="remember-login" />
+                  <input
+                    type="checkbox"
+                    defaultChecked
+                    name="remember"
+                    id="remember-login"
+                  />
                   <span>Lembre-se de mim</span>
                 </label>
                 <a href="http://localhost:3000">Precisa de ajuda?</a>

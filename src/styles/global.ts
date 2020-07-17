@@ -3,6 +3,9 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   :root {
     --primary: #e50914;
+    --dark-gray: #333333;
+    --text-gray: #8C8C8C;
+    --color-gray: #B3b3b3;
   }
 
   *{
@@ -15,6 +18,12 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  input, button {
+    padding: 16px 20px;
+    border-radius: 4px;
   }
 `;
 

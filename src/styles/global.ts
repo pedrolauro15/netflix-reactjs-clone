@@ -24,6 +24,9 @@ const GlobalStyle = createGlobalStyle`
   input, button {
     padding: 16px 20px;
     border-radius: 4px;
+    &::-ms-check {
+      display: none;
+    }
   }
 `;
 

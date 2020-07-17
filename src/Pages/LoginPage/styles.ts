@@ -5,7 +5,11 @@ export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   background-image: url(${background});
-  background-color: #fff;
+  background-color: #000;
+  
+  @media(max-width: 425px){
+    background-image: none;
+  }
 `;
 
 export const OpacityController = styled.div`
@@ -17,11 +21,14 @@ export const OpacityController = styled.div`
 `;
 
 export const Header = styled.header`
-  padding: 24px 2%;
+  padding: 24px 5%;
   width: 100%;
 
   > img {
     width: 167px;
+    @media(max-width: 425px){
+      width: 75px;
+    }
   }
 `;
 
@@ -38,9 +45,24 @@ export const Content = styled.div`
     min-height: 660px;
     min-width: 440px;
 
+    @media(max-width: 425px){
+      background-color: transparent;
+      padding: 0;
+      min-height: 0;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 0 5%;
+      width: 100%;
+    }
+
     > h1 {
       color: #FFF;
       margin-bottom: 28px;
+      @media(max-width: 425px){
+        text-align: left;
+        font-size: 32px;
+      }
     }
 
     > form {
@@ -53,6 +75,7 @@ export const Content = styled.div`
         font-size: 16px;
         margin-bottom: 16px;
         background-color: var(--dark-gray);
+        color: #FFF;
         
         &::placeholder {
           color: var(--text-gray);
@@ -144,6 +167,9 @@ export const Footer = styled.footer`
   width: 100%;
   padding: 32px 20%;
   background-color: rgba(0, 0, 0, 0.75);
+  @media(max-width: 425px){
+    padding: 32px 5%;
+  }
 
   > p {
     color: #757575;
@@ -166,10 +192,21 @@ export const Footer = styled.footer`
       &:last-child{
         margin-right: 0 !important;
       }
+
+      @media(max-width: 425px){
+        flex-wrap: wrap;
+      }
+
       > li {
         color: #757575;
         font-size: 13px;
         margin-right: 128px;
+
+        @media(max-width: 425px){
+          margin-right: 0;
+          padding: 0 16px 16px 0;
+        }
+
         &:hover {
           text-decoration: underline;
         }
@@ -179,6 +216,9 @@ export const Footer = styled.footer`
     > div {
       position: relative;
       margin-bottom: 30px;
+      @media(max-width: 425px){
+        margin-bottom: 0;
+      } 
 
       > img {
         width: 18px;
@@ -194,6 +234,10 @@ export const Footer = styled.footer`
         border-radius: 4px;
         border: 1px solid #75757599;
         color: #757575;
+        &:focus {
+          border: 2px solid #FFF;
+          padding: 11px 25px 11px 49px;
+        }
       }
     }
 `;

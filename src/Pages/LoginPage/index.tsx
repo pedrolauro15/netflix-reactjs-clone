@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { FormEvent } from 'react';
 import { Container, OpacityController, Header, Content, Footer } from './styles';
 import logo from '../../assets/logo.png';
 import facebook from '../../assets/vectors/facebook.svg';
 import globe from '../../assets/vectors/globe.svg';
+import { useHistory } from 'react-router-dom';
 
 const LoginPage: React.FC = () => {
+  const { push } = useHistory();
+
+  const handleNavigateToUserList = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    push('/browse');
+  }
+
   return (
     <Container>
       <OpacityController>
@@ -15,7 +23,7 @@ const LoginPage: React.FC = () => {
           <div>
             <h1>Entrar</h1>
 
-            <form action="">
+            <form onSubmit={handleNavigateToUserList}>
               <input type="text" placeholder="Email ou número de telefone" />
               <input type="password" placeholder="Senha" />
               <button type="submit">Entrar</button>
